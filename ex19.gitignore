@@ -1,0 +1,41 @@
+/*
+ *  UCF COP3330 Fall 2021 Assignment 1 Solution
+ *  Copyright 2021 Uday Gudipudi
+ */
+
+import java.util.*;
+class Main {
+  public static void main(String[] args) {
+    
+    Scanner scan = new Scanner(System.in);
+
+    System.out.print("What is your weight: ");
+    double weight = scan.nextDouble();
+
+    System.out.print("What is your height: ");
+    double height = scan.nextDouble();
+
+    double bmi = (weight/(height * height)) * 703 ;
+
+    System.out.format("Your BMI is %.1f ", bmi);
+
+    if(bmi < 25 && bmi > 18.5){
+    
+    System.out.print("You are within the ideal weight range. ");
+
+    }
+
+    if(bmi < 18.5){
+    
+    System.out.print("You are underweight. You should see your doctor. ");
+
+    }
+
+    if(bmi > 25){
+    
+    System.out.print("You are overweight. You should see your doctor. ");
+    
+    }
+
+  }
+}
